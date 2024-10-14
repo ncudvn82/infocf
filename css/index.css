@@ -1,0 +1,85 @@
+.cf-info {
+    font-family: Arial, sans-serif;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cf-info div:first-child {
+    width: 45vw;
+    /* border: 1px solid black; */
+}
+
+.cf-info div:nth-child(2) {
+    width: 25vw;
+    /* border: 1px solid red; */
+}
+
+.contact-container {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    color: #129c94;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 两列布局 */
+    gap: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #129c94;
+    border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+    grid-column: span 2;
+    /* 提交按钮占据两列 */
+    background-color: #129c94;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #0b7e75;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+        /* 小屏幕时变为一列 */
+    }
+
+    .cf-info div:first-child {
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+
+    .cf-info div:nth-child(2) {
+        display: none;
+        width: 25vw;
+        /* border: 1px solid red; */
+    }
+}
