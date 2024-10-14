@@ -82,4 +82,15 @@
         width: 25vw;
         /* border: 1px solid red; */
     }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+        /* 小屏幕时变为单列 */
+    }
+
+    .contact-form label,
+    .contact-form input {
+        grid-column: 1 / -1;
+        /* 确保 label 和 input 各自占据一行 */
+    }
 }
